@@ -21,7 +21,7 @@
         </li>
         <li> <a href="#contact">Contact me</a>
         </li>
-        <li> <a href="#sign in">Sign in</a>
+        <li> <a href="#signin">Sign in</a>
         </li>
             </ol>
         </nav>
@@ -163,8 +163,10 @@
             <article id="contact">
                 <h2>contact me</h2>
                 <p>i would like to hear from you</p>
-                <form action="https://httpbin.org/get"
-                method="get">
+
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Personal Info</legend>
                 <p>
                 <label for="FirstName">First Name</label>
                 <input type="text" name="FirstName"
@@ -179,7 +181,7 @@
                 autocomplete="on" required>
             </p>
             <p>
-                <label for="Password">Password</label>
+                <label for="password">Password</label>
                 <input type="password" name="password"
                 id="password" placeholder="your secret"
              required>
@@ -205,61 +207,65 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="4"selected>4</option>
+                <option value="4" selected>4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
-             </select>  
+             </select>
             </p>
-            </form>
+            
+        
+                    </fieldset>
+            </form>  
             </article>
-            <hr>
-            <article id="sign in">
-                <h2>Sign Your Account Here</h2>
-                <form action="https://httpbin.org/get"
-                method="get">
-            </article>
-            <p>
-                <label for="email or phone number">Email or Phone Number</label>
-                <input type="email" name="Email"
-                id="email or phone number"
-                autocomplete="on" required
-                autofocus placeholder="davidhans@gmail.com">
-
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input type="password" name="password"
-                id="password"
-                autocomplete="on" required
-                autofocus>
-            </p>
-            <h3>New To Wisdom Branch?</h3>
-            <h4>Create New</h4>
-            <p>
-                <label for="email">Email</label>
-                <input type="email" name="email"
-                id="email" autocapitalize="on" autofocus
-                required>
-
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input type="password" name="password"
-                id="password" autocomplete="on" autofocus
-                required>
-            </p>
-            <p>
-                <lable for="text">your favourite place to visit</lable>
-                <select name="text" id="text">
-                    <option value="kenya">Kenya</option>
-                    <option value="los angeles">Los angeles</option>
-                    <option value="ethiopia"selected>Ethiopia</option>
-                    <option value="haiti">Haiti</option>
-                    <option value="romania">Romania</option>
-
-                </select>
-            </p>
+       <hr>
+           
+            <fieldset>
+                <legend>Favourite Color</legend>
+                <p>
+                    <input type="radio" name="color" id="black" value="black">
+                    <label for="black">Black</label>
+                </p>
+                
+                <p>
+                    <input type="radio" name="color" id="red" value="red">
+                    <label for="red">Red</label>
+                </p>
+                
+                <p>
+                    <input type="radio" name="color" id="blue" value="blue">
+                    <label for="blue">Blue</label>
+                </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>
+                        Do You Have Pets?
+                    </legend>
+                    <p>
+                        <input type="checkbox" name="pets" id="dog" value="dog">
+                        <label for="dog">Dog</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pets" id="cat" value="cat">
+                        <label for="cat">Cat</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pets" id="others" value="others">
+                        <label for="others">Others</label>
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Send Me A Note</legend>
+                    <label for="message">Your Message:</label>
+                    <br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="type your message here"></textarea>
+                </fieldset>
+                <br>
+                <button type="submit">Submit</button>
+                <button type="submit" formaction="https://httpbin.org/get" formmethod="post">Post</button>
+                <button type="reset">Reset</button>
                 
                      
         </main>
